@@ -25,8 +25,8 @@
     --font-size-sm: 16px;
     --font-size-md: 18px;
     --font-size-lg: 24px;
-    --font-size-xl: 28px;
-    --font-size-xxl: 88px;
+    --font-size-xl: 40px;
+    --font-size-xxl: 55px;
 }
 
 body {
@@ -89,10 +89,16 @@ nav ul {
     margin: 0;
 }
 
-nav ul li a:link,
-nav ul li a:visited {
+nav ul li a:link {
     color: var(--text-color);
     opacity: 0.7;
+}
+.active {
+  color: var(--accent-color) !important;
+  opacity: 1 !important;
+  border-bottom: 3px solid var(--accent-color);
+  padding-bottom: 3px;
+  font-weight: bold;
 }
 
 /* TYPOGRAPHY */
@@ -104,15 +110,15 @@ a:visited {
 }
 
 h1 {
-    font-size: var(--font-size-xxl);
+    font-size: var(--font-size-xl);
     margin-bottom: var(--space-sm);
 }
 
 h2 {
     font-size: var(--font-size-xl);
-    color: var(--accent-color);
+    color: var(--text-color);
     margin-bottom: var(--space-lg);
-    font-weight: 200;
+    font-weight: 700;
     margin-top: var(--space-xl);
 }
 
@@ -134,32 +140,52 @@ p {
 /* SECTIONS  */
 
 #about {
-    margin-top: var(--space-xxl);
+    margin-top: var(--space-xl);
+    display:flex;
+    align-items: center;
 }
-
+.intro p:first-child {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--text-color);
+}
+.profile img {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: var(--space-lg);
+}
 #about h1 {
     font-size: var(--font-size-xxl);
     margin-bottom: var(--space-sm);
+    span {
+        color: var(--accent-color);
+    }
 }
 
 #about p {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-lg);
     font-weight: 200;
     line-height: 1.4;
     color: var(--text-color);
 }
 
 section {
-    margin-top: var(--space-xxl);
+    margin-top: var(--space-xl);
     margin-bottom: var(--space-xxl);
 }
 
 .card {
-    background: linear-gradient(90deg, #35353f 0%, #3d3b3e 50%, #3d3b3e 50%);
-    border-radius: 20px;
-    padding: var(--space-xs) var(--space-lg) var(--space-lg);
-    border: 0.5px solid #484851;
+    border-left: 5px solid var(--accent-color);
+    padding: var(--space-xs) var(--space-md) var(--space-xs);
     margin-bottom: var(--space-lg);
+}
+.card div:first-child {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: var(--space-md);
 }
 
 .card p {
