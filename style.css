@@ -8,7 +8,7 @@
     --background-color: #fff;
     --second-background-color: #f5f0ff;
     --text-color: #2a2a31;
-    --text-color-muted: #b9b9b9;
+    --text-color-muted: grey;
     --another-color: #f9f4ff;
 
 
@@ -24,7 +24,7 @@
     --font-size-xs: 14px;
     --font-size-sm: 16px;
     --font-size-md: 18px;
-    --font-size-lg: 24px;
+    --font-size-lg: 32px;
     --font-size-xl: 40px;
     --font-size-xxl: 55px;
 }
@@ -208,10 +208,9 @@ section {
 /* RECENT WORK */
 
 .project {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    grid-template-rows: 1fr 3fr;
-    column-gap: var(--space-lg);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     padding: var(--space-md) var(--space-md);
     background-color: var(--second-background-color);
     border-radius: 20px;
@@ -219,18 +218,36 @@ section {
 }
 
 .project .thumbnail {
-    grid-row: span 2;
+  flex: 0 0 33.3333%;
 }
-
-.project img {
-    width: 100%;
+.project .empty {
+  flex: 0 0 4.3333%;
+}
+.project .detail {
+  flex: 0 0 62.3333%;
+  h2 {
+    font-size: var(--font-size-lg);
+    margin: var(--space-sm) 0;
+  }
+  div {
     margin-top: var(--space-md);
+  }
+}
+.detail div {
+  width: 100%;
+
+}
+.thumbnail img {
+    width: 100%;
     border-radius: 14px;
 }
 
 .project p a {
-    display: block;
     margin-top: var(--space-md);
+    border: 2px solid var(--accent-color);
+    border-radius: 20px;
+    padding: var(--space-xs) var(--space-md);
+    font-size: var(--font-size-md);
 }
 
 /* CONTACT  */
