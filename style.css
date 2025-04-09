@@ -303,7 +303,7 @@ footer .social {
     align-items: center;
 }
 
-footer .social a:hover svg {
+footer .social a:hover svg, footer .social a:hover svg circle {
     fill: var(--accent-color);
 }
 
