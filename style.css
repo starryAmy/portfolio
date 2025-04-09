@@ -173,7 +173,7 @@ p {
 
 section {
     margin-top: var(--space-xl);
-    margin-bottom: var(--space-xxl);
+    margin-bottom: var(--space-xl);
 }
 
 .card {
@@ -212,7 +212,10 @@ section {
     grid-template-columns: 2fr 3fr;
     grid-template-rows: 1fr 3fr;
     column-gap: var(--space-lg);
-    padding: var(--space-md) var(--space-lg);
+    padding: var(--space-md) var(--space-md);
+    background-color: var(--second-background-color);
+    border-radius: 20px;
+    margin-bottom: var(--space-sm);
 }
 
 .project .thumbnail {
