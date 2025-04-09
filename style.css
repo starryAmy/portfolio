@@ -209,7 +209,9 @@ section {
 #experience .job p.role {
     font-size: var(--font-size-md);
 }
-
+.school .degree {
+  font-size: var(--font-size-md);
+}
 /* RECENT WORK */
 
 .project {
