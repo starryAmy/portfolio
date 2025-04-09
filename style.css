@@ -163,6 +163,9 @@ p {
     font-size: var(--font-size-md);
   }
 }
+.profile-mobile {
+  display: none;
+}
 .profile img {
     width: 250px;
     height: auto;
@@ -306,13 +309,6 @@ footer .social a:hover svg {
 
 @media screen and (max-width: 600px) {
     :root {
-        --primary-color: #f9a826;
-        --secondary-color: #f9a826;
-        --accent-color: #47ebeb;
-        --background-color: #2a2a31;
-        --text-color: #fff;
-        --text-color-muted: #b9b9b9;
-
         /* spacing */
         --space-xs: 4px;
         --space-sm: 8px;
@@ -331,18 +327,38 @@ footer .social a:hover svg {
     }
 
     header {
-        align-items: flex-start;
+      align-items: flex-start;
     }
-
-    .logo {
-        font-size: var(--font-size-xl);
+    header .container {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
     }
-
     nav ul {
+      padding: 0;
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .logo {
+        font-size: var(--font-size-sm);
+    }
+    #about {
         flex-direction: column;
-        gap: 14px;
-        list-style: none;
-        align-items: flex-end;
+        align-items: center;
+        text-align: center;
+    }
+    .profile {
+      display: none;
+    }
+    .profile-mobile {
+      display: block;
+      img {
+        width: 250px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 50%;
+      }
     }
 
     section {
@@ -357,8 +373,9 @@ footer .social a:hover svg {
     .portfolio-card {
         flex-direction: column;
         width: 100%;
+        align-items: center;
     }
     .project {
-      width: 100%;
+      width: 95%;
   }
 }
