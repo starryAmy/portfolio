@@ -204,7 +204,9 @@ section {
 #skills p {
     line-height: 1.8;
 }
-
+#skills h2 {
+    margin-top: var(--space-sm);
+}
 /* EXPERIENCE */
 
 #experience .job p.role {
@@ -366,7 +368,9 @@ footer .social a:hover svg {
         margin-top: var(--space-xl);
         margin-bottom: var(--space-lg);
     }
-
+    #skills {
+        margin-top: var(--space-md);
+    }
     h2 {
         margin-top: var(--space-lg);
     }
