@@ -23,8 +23,8 @@
     /* typography */
     --font-size-xs: 14px;
     --font-size-sm: 16px;
-    --font-size-md: 18px;
-    --font-size-lg: 32px;
+    --font-size-md: 20px;
+    --font-size-lg: 28px;
     --font-size-xl: 40px;
     --font-size-xxl: 55px;
 }
@@ -38,18 +38,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* width: 100vw; */
-    /* overflow-x: hidden; */
 }
-
 #page {
-    display: flex;
-    flex-direction: column;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding-top: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: var(--space-md);
 }
-
 /* LOGO AND NAVIGATION */
 
 header {
@@ -144,15 +140,28 @@ p {
     margin-top: var(--space-xl);
     display:flex;
     align-items: center;
+    .intro {
+      margin-right: var(--space-sm);
+    }
 }
-.intro p:first-child {
-    font-size: var(--font-size-lg);
-    font-weight: 700;
-    color: var(--text-color);
+#about h1 {
+  font-size: var(--font-size-xxl);
+  margin-bottom: var(--space-sm);
+  span {
+      color: var(--accent-color);
+  }
 }
-.portfolio-card {
-  display: flex;
-  gap: 20px;
+#about p {
+  font-size: var(--font-size-lg);
+  font-weight: 200;
+  line-height: 1.4;
+  color: var(--text-color);
+  .highlight {
+      color: var(--accent-color);
+  }
+  .location {
+    font-size: var(--font-size-md);
+  }
 }
 .profile img {
     width: 250px;
@@ -160,20 +169,6 @@ p {
     object-fit: cover;
     border-radius: 50%;
     margin-right: var(--space-lg);
-}
-#about h1 {
-    font-size: var(--font-size-xxl);
-    margin-bottom: var(--space-sm);
-    span {
-        color: var(--accent-color);
-    }
-}
-
-#about p {
-    font-size: var(--font-size-lg);
-    font-weight: 200;
-    line-height: 1.4;
-    color: var(--text-color);
 }
 
 section {
@@ -185,17 +180,19 @@ section {
     border-left: 5px solid var(--accent-color);
     padding: var(--space-xs) var(--space-md) var(--space-xs);
     margin-bottom: var(--space-lg);
+    &:hover {
+        background-color: var(--second-background-color);
+    }
 }
 .card div:first-child {
     font-size: var(--font-size-lg);
     font-weight: 700;
     color: var(--accent-color);
-    margin-bottom: var(--space-sm);
 }
 
 .card p {
     margin: var(--space-xs) 0;
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm);
 }
 
 /* SKILLS */
@@ -213,7 +210,10 @@ section {
   font-size: var(--font-size-md);
 }
 /* RECENT WORK */
-
+.portfolio-card {
+  display: flex;
+  gap: 20px;
+}
 .project {
     width: 50%;
     display: flex;
@@ -223,6 +223,10 @@ section {
     background-color: var(--second-background-color);
     border-radius: 20px;
     margin-bottom: var(--space-sm);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    &:hover {
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+    }
 }
 
 .project .thumbnail {
@@ -232,7 +236,7 @@ section {
 .project .detail {
   h2 {
     font-size: var(--font-size-lg);
-    margin: var(--space-sm) 0;
+    margin: var(--space-md) 0;
   }
   div {
     margin-top: var(--space-md);
@@ -280,7 +284,6 @@ section {
 /* FOOTER */
 
 footer {
-    margin-top: var(--space-xl);
     padding: 0 0 var(--space-lg);
     color: var(--text-color-muted);
     text-align: center;
