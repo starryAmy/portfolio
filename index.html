@@ -16,9 +16,10 @@
       </div>
       <nav>
           <ul>
-              <li><a href="#experience">Skills</a></li>
+              <li><a href="#skills">Skills</a></li>
               <li><a href="#portfolio">Projects</a></li>
-              <li><a href="#contact">Background</a></li>
+              <li><a href="#experience">Experince</a></li>
+              <li><a href="#contact">Contact</a></li>
           </ul>
       </nav>
     </div>
@@ -26,12 +27,17 @@
     <div id="page">
       <main>
           <div id="about">
+            <div class="profile-mobile">
+              <img src="/images/headshot.jpg"
+                  alt="headshot">
+            </div>
             <div class="intro">
               <h1>
                 Hi, I'm <span>Amy Huang</span>.
               </h1>
               <p>
-                  I'm a full stack web developer specializing in Ruby on Rails, JavaScript, and front-end technologies. I’m now excited to continue building products that make a positive impact in the world. ✨
+                <i><span class="location">📍 Tokyo, Japan</span></i><br>
+                I'm a full stack web developer specializing in <span class="highlight">Ruby on Rails</span>, <span class="highlight">JavaScript</span>, and <span class="highlight">front-end technologies</span>. I’m now excited to continue building products that make a positive impact in the world. ✨
               </p>
             </div>
             <div class="profile">
@@ -93,7 +99,7 @@
                     <img src="https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white" />
                   </div>
                   <p>
-                    StudyHive is a web application that helps users connect with like-minded individuals to discuss, learn, and grow together. Whether you're studying for an exam or exploring a shared interest, StudyHive allows you to create or join a Hive—a virtual space designed for focused collaboration and real-time interaction.<br>
+                    StudyHive is a social learning app and virtual study marketplace where users connect through Hives — shared spaces for focus, real-time collaboration, and mutual support. StudyHive turns studying into a shared journey, not a solo grind.<br>
                     <br>
                       <a href="https://github.com/starryAmy/StudyHive" target="_blank">Github Repo</a>
                       <a href="https://www.studyhive.org/" target="_blank">Website Link</a>
@@ -117,7 +123,7 @@
                     <img src="https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white" />
                   </div>
                   <p>
-                    SuperHeroAcademy is a dynamic online marketplace where users can both enroll in exciting superpower-themed courses and create their own! As students, users can browse and review a variety of courses, add courses to their favorites list, and manage their bookings with ease. As teachers, users can create new superpower courses and manage students who sign up for their classes. Unleash your inner hero — whether you're learning or teaching, SuperHeroAcademy is the place to grow your powers!<br>
+                    SuperHeroAcademy is a dynamic online marketplace for superpower-themed courses, where users can enroll as students or create and manage classes as teachers. Unleash your inner hero — whether you're here to learn or teach.<br>
                     <br>
                       <a href="https://github.com/starryAmy/StudyHive" target="_blank">Github Repo</a>
                       <a href="https://www.studyhive.org/" target="_blank">Website Link</a>
@@ -219,23 +225,9 @@
           </div>
       </footer>
     </div>
-    <script>
-        // Catch all the # links from the nav and make them scroll smoothly to their destinations
-        const navLinks = document.querySelectorAll("nav ul li a");
-
-        // loop through the links and set an onclick event to send the user to the correct section in a smooth scroll
-        navLinks.forEach((link) => {
-            link.onclick = (e) => {
-                e.preventDefault();
-                const target = document.querySelector(e.target.getAttribute("href"));
-                target.scrollIntoView({
-                    behavior: "smooth",
-                });
-                return false;
-            };
-        });
-    </script>
-    <script src="./click.js"></script>
+    <script src="./scroll_section.js"></script>
+    <script src="./click_to_scroll.js"></script>
+    <script src="./click_to_bold.js"></script>
 </body>
 
 </html>

@@ -23,8 +23,8 @@
     /* typography */
     --font-size-xs: 14px;
     --font-size-sm: 16px;
-    --font-size-md: 18px;
-    --font-size-lg: 32px;
+    --font-size-md: 20px;
+    --font-size-lg: 28px;
     --font-size-xl: 40px;
     --font-size-xxl: 55px;
 }
@@ -38,18 +38,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* width: 100vw; */
-    /* overflow-x: hidden; */
 }
-
 #page {
-    display: flex;
-    flex-direction: column;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding-top: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: var(--space-md);
 }
-
 /* LOGO AND NAVIGATION */
 
 header {
@@ -62,7 +58,7 @@ header {
     /* glass effect */
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     /* glass effect */
 }
 header .container {
@@ -144,15 +140,31 @@ p {
     margin-top: var(--space-xl);
     display:flex;
     align-items: center;
+    .intro {
+      margin-right: var(--space-sm);
+    }
 }
-.intro p:first-child {
-    font-size: var(--font-size-lg);
-    font-weight: 700;
-    color: var(--text-color);
+#about h1 {
+  font-size: var(--font-size-xxl);
+  margin-bottom: var(--space-sm);
+  span {
+      color: var(--accent-color);
+  }
 }
-.portfolio-card {
-  display: flex;
-  gap: 20px;
+#about p {
+  font-size: var(--font-size-lg);
+  font-weight: 200;
+  line-height: 1.4;
+  color: var(--text-color);
+  .highlight {
+      color: var(--accent-color);
+  }
+  .location {
+    font-size: var(--font-size-md);
+  }
+}
+.profile-mobile {
+  display: none;
 }
 .profile img {
     width: 250px;
@@ -160,20 +172,6 @@ p {
     object-fit: cover;
     border-radius: 50%;
     margin-right: var(--space-lg);
-}
-#about h1 {
-    font-size: var(--font-size-xxl);
-    margin-bottom: var(--space-sm);
-    span {
-        color: var(--accent-color);
-    }
-}
-
-#about p {
-    font-size: var(--font-size-lg);
-    font-weight: 200;
-    line-height: 1.4;
-    color: var(--text-color);
 }
 
 section {
@@ -185,6 +183,9 @@ section {
     border-left: 5px solid var(--accent-color);
     padding: var(--space-xs) var(--space-md) var(--space-xs);
     margin-bottom: var(--space-lg);
+    &:hover {
+        background-color: var(--second-background-color);
+    }
 }
 .card div:first-child {
     font-size: var(--font-size-lg);
@@ -195,7 +196,7 @@ section {
 
 .card p {
     margin: var(--space-xs) 0;
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm);
 }
 
 /* SKILLS */
@@ -203,15 +204,22 @@ section {
 #skills p {
     line-height: 1.8;
 }
-
+#skills h2 {
+    margin-top: var(--space-sm);
+}
 /* EXPERIENCE */
 
 #experience .job p.role {
     font-size: var(--font-size-md);
 }
-
+.school .degree {
+  font-size: var(--font-size-md);
+}
 /* RECENT WORK */
-
+.portfolio-card {
+  display: flex;
+  gap: 20px;
+}
 .project {
     width: 50%;
     display: flex;
@@ -221,6 +229,10 @@ section {
     background-color: var(--second-background-color);
     border-radius: 20px;
     margin-bottom: var(--space-sm);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    &:hover {
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+    }
 }
 
 .project .thumbnail {
@@ -230,7 +242,7 @@ section {
 .project .detail {
   h2 {
     font-size: var(--font-size-lg);
-    margin: var(--space-sm) 0;
+    margin: var(--space-md) 0;
   }
   div {
     margin-top: var(--space-md);
@@ -278,7 +290,6 @@ section {
 /* FOOTER */
 
 footer {
-    margin-top: var(--space-xl);
     padding: 0 0 var(--space-lg);
     color: var(--text-color-muted);
     text-align: center;
@@ -301,13 +312,6 @@ footer .social a:hover svg {
 
 @media screen and (max-width: 600px) {
     :root {
-        --primary-color: #f9a826;
-        --secondary-color: #f9a826;
-        --accent-color: #47ebeb;
-        --background-color: #2a2a31;
-        --text-color: #fff;
-        --text-color-muted: #b9b9b9;
-
         /* spacing */
         --space-xs: 4px;
         --space-sm: 8px;
@@ -326,25 +330,47 @@ footer .social a:hover svg {
     }
 
     header {
-        align-items: flex-start;
+      align-items: flex-start;
     }
-
-    .logo {
-        font-size: var(--font-size-xl);
+    header .container {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
     }
-
     nav ul {
+      padding: 0;
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .logo {
+        font-size: var(--font-size-sm);
+    }
+    #about {
         flex-direction: column;
-        gap: 14px;
-        list-style: none;
-        align-items: flex-end;
+        align-items: center;
+        text-align: center;
+    }
+    .profile {
+      display: none;
+    }
+    .profile-mobile {
+      display: block;
+      img {
+        width: 250px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 50%;
+      }
     }
 
     section {
         margin-top: var(--space-xl);
         margin-bottom: var(--space-lg);
     }
-
+    #skills {
+        margin-top: var(--space-md);
+    }
     h2 {
         margin-top: var(--space-lg);
     }
@@ -352,8 +378,9 @@ footer .social a:hover svg {
     .portfolio-card {
         flex-direction: column;
         width: 100%;
+        align-items: center;
     }
     .project {
-      width: 100%;
+      width: 95%;
   }
 }
