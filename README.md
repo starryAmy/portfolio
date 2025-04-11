@@ -1,17 +1,15 @@
-# A Simple One-Page Portfolio Template
+# 🌐 Portfolio Webpage
+This is my personal portfolio website, built with HTML, CSS, and vanilla JavaScript. It showcases my background, projects, and contact information in a clean, responsive layout.
 
-### For integration anywhere
+# 🚀 Features
+📌 **Smooth section reveal on scroll:** Sections gracefully appear as you scroll down the page, adding a dynamic touch to the browsing experience.
 
-This is a simple one-page portfolio template for Developers and UI/UX pros
+📌 **Dynamic navigation highlighting:** The navigation bar highlights the section currently in view, giving users a clear sense of where they are on the page.
 
-It's built in plain HTML and CSS so you can integrate it into any framework or just host it for free on Github pages.
+# 🛠️ Built With
+📌 HTML5 </br>
+📌 CSS3 (with transitions and responsive design) </br>
+📌 JavaScript (scroll detection and DOM manipulation)
 
-# See it in action:
-
-[https://ayushsarangithub.github.io/one-page-portfolios/](https://ayushsarangithub.github.io/one-page-portfolios/)
-
-[![https://simplenote-to-obsidian.fly.dev/](https://github.com/user-attachments/assets/6615efdb-2a2c-4f13-af43-6c0605a2fbd4)](https://ayushsarangithub.github.io/one-page-portfolios/)
-
-Feel free to fork this repo and tweak it to your liking
-
-https://ayushsarangithub.github.io/one-page-portfolios/
+# 📷 Preview
+<img width="1031" alt="截圖 2025-04-11 下午3 59 36" src="https://github.com/user-attachments/assets/0e0bb018-b1ad-4162-a912-36e135016f52" />
