@@ -17,4 +17,4 @@ This webpage is delpoyed on Github page: https://starryamy.github.io/portfolio/
 
 # 🗒️ Footnote
 This portfolio is based on [this template](https://github.com/ayushsaranGithuB/one-page-portfolios), which I customized to fit my own style.
-Feedback and suggestions are always welcome! 😊
+Any feedback and suggestions are always welcome! 😊
